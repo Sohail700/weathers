@@ -6,6 +6,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 /* card section -------- */
+body {
+  background: #555;
+}
+
 .card {
   width: 90%;
   max-width: 470px;
@@ -42,9 +46,14 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
+  position: relative;
 }
 .search button img  {
-  height: 25px;
+  height: 20px;
+  position: absolute;
+  top: 9px;
+  left: 11px;
+
 }
 .weather-icon {
   width: 170px;
@@ -90,4 +99,39 @@
   margin-top: 10px;
   display: none;
   font-weight: 700;
+}
+
+@media (max-width: 760px){
+  .card {
+    width: 80%;
+  }
+  .search {
+    max-width: 150%;
+    margin: 0 0;
+  }
+  .search input {
+    width: 100%;
+  }
+  .search input::placeholder {
+    font-size: 15px;
+  }
+  .search button{
+    height: 40px;
+    width: 40px;
+  }
+  .col img {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 30px;
+  }
+  .humidity, .wind {
+    font-size: 20px;
+    margin-top: -6px;
+  }
+  .details {
+    padding: 0 0px;
+    margin-right: 10px;
+    margin-top: 50px;
+    bottom: 10px;
+  }
 }
